@@ -24,22 +24,15 @@
 
     <!-- 1. NAVBAR -->
 
-
     <header class="sticky top-0 z-50 bg-[#263536] text-white shadow-md">
 
-        <nav class="mx-auto flex max-w-7xl items-center gap-3 px-5 py-4 lg:px-8" aria-label="Main navigation">
+        <nav class="relative mx-auto flex max-w-7xl items-center gap-3 px-5 py-4 lg:px-8" aria-label="Main navigation">
 
-            <!-- Logo and Brand -->
+            <!-- Logo -->
             <a href="index.html" class="flex shrink-0 items-center gap-2 sm:gap-3">
 
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#315247] text-[#A8E6BD] sm:h-11 sm:w-11">
-
-                    <i
-                        data-lucide="book-open"
-                        class="h-7 w-7"
-                        aria-hidden="true"
-                    ></i>
-
+                    <i data-lucide="book-open" class="h-7 w-7" aria-hidden="true"></i>
                 </span>
 
                 <span class="text-base font-extrabold tracking-tight sm:text-2xl">
@@ -48,42 +41,79 @@
 
             </a>
 
+            <!-- Desktop Navigation Links -->
+            <div class="ml-auto hidden items-center gap-4 text-sm font-medium md:flex lg:gap-5">
 
-            <!-- Navigation Links -->
-            <div class="ml-auto flex items-center gap-1 text-xs font-medium sm:gap-4 sm:text-sm lg:gap-5">
+                <a href="index.html" aria-current="page" class="rounded-lg bg-[#365448] px-3 py-2 text-[#91E5AF] transition duration-200 hover:bg-[#426657]">
+                Home
+            </a>
 
-                <a href="index.html" aria-current="page" class="rounded-lg bg-[#365448] px-2.5 py-2 text-[#91E5AF] transition duration-200 hover:bg-[#426657] sm:px-3">
-                    Home
-                </a>
+                <a href="favorites.html" class="rounded-lg px-3 py-2 text-gray-200 transition duration-200 hover:bg-[#365448] hover:text-[#91E5AF]">
+                Favorites
+            </a>
 
-                <a href="favorites.html" class="rounded-lg px-2.5 py-2 text-gray-200 transition duration-200 hover:bg-[#365448] hover:text-[#91E5AF] sm:px-3">
-                    Favorites
-                </a>
-
-                <a href="about.html" class="rounded-lg px-2.5 py-2 text-gray-200 transition duration-200 hover:bg-[#365448] hover:text-[#91E5AF] sm:px-3">
-                    About
-                </a>
+                <a href="about.html" class="rounded-lg px-3 py-2 text-gray-200 transition duration-200 hover:bg-[#365448] hover:text-[#91E5AF]">
+                About
+            </a>
 
             </div>
 
+            <!-- Mobile Hamburger: HTML + Tailwind Only -->
+            <div class="relative ml-auto md:hidden">
 
-            <!-- Explore Books Button -->
+                <input type="checkbox" id="mobile-menu-toggle" class="peer sr-only">
 
-            <a href="#explore" class="ml-64 hidden shrink-0 items-center gap-2 rounded-xl bg-[#20834A] px-4 py-3 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#176A3A] md:inline-flex">
+                <label for="mobile-menu-toggle" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg text-white transition hover:bg-[#365448] focus-within:ring-2 focus-within:ring-[#91E5AF]" aria-label="Toggle navigation menu">
+                <i data-lucide="menu"
+                   class="h-6 w-6"
+                   aria-hidden="true"></i>
+            </label>
+
+                <!-- Mobile Dropdown Menu -->
+                <div class="absolute right-0 top-full z-50 mt-3 hidden w-56 rounded-xl border border-[#435655] bg-[#263536] p-3 shadow-xl peer-checked:block">
+
+                    <nav class="flex flex-col gap-2" aria-label="Mobile navigation">
+
+                        <a href="index.html" class="rounded-lg bg-[#365448] px-4 py-3 text-[#91E5AF] transition hover:bg-[#426657]">
+                        Home
+                    </a>
+
+                        <a href="favorites.html" class="rounded-lg px-4 py-3 text-gray-200 transition hover:bg-[#365448] hover:text-[#91E5AF]">
+                        Favorites
+                    </a>
+
+                        <a href="about.html" class="rounded-lg px-4 py-3 text-gray-200 transition hover:bg-[#365448] hover:text-[#91E5AF]">
+                        About
+                    </a>
+
+                        <a href="#explore" class="mt-1 flex items-center justify-center gap-2 rounded-xl bg-[#20834A] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#176A3A]">
+                        Explore Books
+                        <i data-lucide="arrow-right"
+                           class="h-4 w-4"
+                           aria-hidden="true"></i>
+                    </a>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <!-- Explore Books Button: Desktop Only -->
+            <a href="#explore" class="hidden shrink-0 items-center gap-2 rounded-xl bg-[#20834A] px-4 py-3 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#176A3A] md:ml-6 md:inline-flex">
 
     Explore Books
 
-    <i
-        data-lucide="arrow-right"
-        class="h-4 w-4"
-        aria-hidden="true"
-    ></i>
+    <i data-lucide="arrow-right"
+       class="h-4 w-4"
+       aria-hidden="true"></i>
 
 </a>
 
         </nav>
 
     </header>
+
 
 
 
@@ -123,8 +153,8 @@
                     <!-- Description -->
                     <p class="mt-5 max-w-lg text-base leading-7 text-[#52666B] sm:text-lg sm:leading-8">
 
-                        Find your next favorite book from thousands of titles. Search, browse, and save the books you love.
-
+                        Discover a world of amazing books, explore stories that inspire you, learn new things, and find books that match your interests. Browse different titles, search for books you want to read, and save your favorites so you can easily find them again whenever
+                        you want to continue your reading journey.
                     </p>
 
 
@@ -196,7 +226,7 @@
 
                 </div>
 
-                <a href="#explore" class="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#20834A] transition hover:text-[#145B32]">
+                <a href="#explore" class="hidden shrink-0 items-center gap-2 rounded-xl bg-[#20834A] px-4 py-3 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#176A3A] md:inline-flex">
 
                     View All
 
@@ -211,163 +241,164 @@
             </div>
 
 
-            <!-- Placeholder: Exercise 1.2 -->
-            <div class="mt-6 rounded-2xl border border-dashed border-[#B9D2C1] bg-white/70 px-6 py-10 text-center sm:py-14">
 
-                <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#E4F1E8] text-[#20834A]">
+            <!-- Exercise 1.2: Responsive Book Grid -->
+            <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-                    <i data-lucide="library-big" class="h-7 w-7" aria-hidden="true"></i>
+                <!-- Book Card 1 -->
+                <article class="overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="Book cover representing a reading collection" class="h-56 w-full object-cover">
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-[#263536]">The Reading Life</h3>
+                        <p class="mt-1 text-sm text-[#68756D]">By Anna Green</p>
+                        <p class="mt-3 text-sm leading-6 text-[#52666B]">
+                            Discover new ideas and build a lifelong love of reading.
+                        </p>
+                    </div>
+                </article>
 
-                </div>
+                <!-- Book Card 2 -->
+                <article class="overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=600&q=80" alt="Books arranged for a quiet reading session" class="h-56 w-full object-cover">
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-[#263536]">A World of Stories</h3>
+                        <p class="mt-1 text-sm text-[#68756D]">By James Miller</p>
+                        <p class="mt-3 text-sm leading-6 text-[#52666B]">
+                            Explore stories that take you to new places and times.
+                        </p>
+                    </div>
+                </article>
 
-                <h3 class="mt-4 text-lg font-bold text-[#263536]">
-                    Your book collection starts here
-                </h3>
+                <!-- Book Card 3 -->
+                <article class="overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="A selection of books on a table" class="h-56 w-full object-cover">
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-[#263536]">Everyday Discoveries</h3>
+                        <p class="mt-1 text-sm text-[#68756D]">By Sarah James</p>
+                        <p class="mt-3 text-sm leading-6 text-[#52666B]">
+                            Find inspiration in the small details of everyday life.
+                        </p>
+                    </div>
+                </article>
 
-                <p class="mx-auto mt-2 max-w-md text-sm leading-6 text-[#68756D]">
-
-                    We will add book covers, author names, ratings, and Add to Favorites buttons in Exercise 1.2.
-
-                </p>
+                <!-- Book Card 4 -->
+                <article class="overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80" alt="Books ready to be read" class="h-56 w-full object-cover">
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-[#263536]">The Power of Learning</h3>
+                        <p class="mt-1 text-sm text-[#68756D]">By Michael Reed</p>
+                        <p class="mt-3 text-sm leading-6 text-[#52666B]">
+                            Learn something new and keep growing one page at a time.
+                        </p>
+                    </div>
+                </article>
 
             </div>
-
         </section>
 
-    </main>
+
+        <!-- 3. FOOTER -->
 
 
+        <footer class="bg-[#263536] text-white">
 
-    <!-- 3. FOOTER -->
+            <div class="mx-auto max-w-7xl px-5 py-10 sm:px-8">
 
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10">
 
-    <footer class="bg-[#263536] text-white">
+                    <!-- Footer Brand -->
+                    <div>
 
-        <div class="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+                        <a href="index.html" class="inline-flex items-center gap-2 text-lg font-bold">
 
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10">
+                            <i data-lucide="book-open" class="h-8 w-8 text-[#91E5AF]" aria-hidden="true"></i>
 
-                <!-- Footer Brand -->
-                <div>
-
-                    <a href="index.html" class="inline-flex items-center gap-2 text-lg font-bold">
-
-                        <i data-lucide="book-open" class="h-8 w-8 text-[#91E5AF]" aria-hidden="true"></i>
-
-                        <span>
+                            <span>
                             Book <span class="text-[#70D99A]">Explorer</span>
-                        </span>
+                            </span>
 
-                    </a>
+                        </a>
 
-                    <p class="mt-2 max-w-xs text-sm leading-6 text-gray-300">
-                        Better books. A brighter you. Discover stories and find inspiration one page at a time.
-                    </p>
+                        <p class="mt-2 max-w-xs text-sm leading-6 text-gray-300">
+                            Better books. A brighter you. Discover stories and find inspiration one page at a time.
+                        </p>
 
-                </div>
+                    </div>
 
 
-                <!-- Footer Navigation -->
-                <nav class="flex flex-col items-start gap-3 text-sm text-gray-200" aria-label="Footer navigation">
+                    <!-- Footer Navigation -->
+                    <nav class="flex flex-col items-start gap-3 text-sm text-gray-200" aria-label="Footer navigation">
 
-                    <h2 class="mb-1 text-base font-bold text-white">
-                        Quick Links
-                    </h2>
+                        <h2 class="mb-1 text-base font-bold text-white">
+                            Quick Links
+                        </h2>
 
-                    <a href="index.html" class="transition hover:text-[#91E5AF]">
+                        <a href="index.html" class="transition hover:text-[#91E5AF]">
                         Home
                     </a>
 
-                    <a href="favorites.html" class="transition hover:text-[#91E5AF]">
+                        <a href="favorites.html" class="transition hover:text-[#91E5AF]">
                         Favorites
                     </a>
 
-                    <a href="about.html" class="transition hover:text-[#91E5AF]">
+                        <a href="about.html" class="transition hover:text-[#91E5AF]">
                         About
                     </a>
 
-                </nav>
+                    </nav>
 
 
-                <!-- Social Media -->
-                <div>
+                    <!-- Social Media -->
+                    <div>
 
-                    <h2 class="mb-4 text-base font-bold text-white">
-                        Connect With Us
-                    </h2>
+                        <h2 class="mb-4 text-base font-bold text-white">
+                            Connect With Us
+                        </h2>
 
-                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-4">
 
-                        <!-- GitHub -->
-                        <a href="https://github.com/Neema2023" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
-                            <i class="fa-brands fa-github text-xl" aria-hidden="true"></i>
-                        </a>
-
-
-
-                        <!-- WhatsApp -->
-                        <a href="https://wa.me/250790156413" target="_blank" rel="noopener noreferrer" aria-label="Chat with me on WhatsApp" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
-                            <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
-                        </a>
+                            <!-- GitHub -->
+                            <a href="https://github.com/Neema2023" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
+                                <i class="fa-brands fa-github text-xl" aria-hidden="true"></i>
+                            </a>
 
 
 
-                        <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/in/neema2023/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
-                            <i class="fa-brands fa-linkedin-in text-xl" aria-hidden="true"></i>
-                        </a>
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/250790156413" target="_blank" rel="noopener noreferrer" aria-label="Chat with me on WhatsApp" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
+                                <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+                            </a>
 
+
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/neema2023/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
+                                <i class="fa-brands fa-linkedin-in text-xl" aria-hidden="true"></i>
+                            </a>
+
+
+                        </div>
 
                     </div>
 
                 </div>
 
+
+                <!-- Copyright -->
+                <div class="mt-8 border-t border-[#435655] pt-5 text-center text-xs text-gray-300">
+
+                    &copy; 2026 Book Explorer. All rights reserved.
+
+                </div>
+
             </div>
 
+        </footer>
+        <!-- Initialize Lucide Icons -->
+        <script>
+            lucide.createIcons();
+        </script>
 
-            <!-- Copyright -->
-            <div class="mt-8 border-t border-[#435655] pt-5 text-center text-xs text-gray-300">
-
-                &copy; 2026 Book Explorer. All rights reserved.
-
-            </div>
-
-        </div>
-
-    </footer>
-
-
-
-    <!-- 4. JAVASCRIPT: SEARCH FORM DEMO -->
-
-
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Select the search form and input
-        const heroSearchForm = document.querySelector("#hero-search-form");
-        const heroSearchInput = document.querySelector("#hero-search");
-        const searchMessage = document.querySelector("#search-message");
-
-        // Handle search form submission
-        heroSearchForm.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            const query = heroSearchInput.value.trim();
-
-            if (!query) {
-                searchMessage.textContent =
-                    "Please enter a book title or author.";
-
-                heroSearchInput.focus();
-                return;
-            }
-
-            searchMessage.textContent =
-                `You searched for "${query}". Actual book search will be added in Lab 3.`;
-        });
-    </script>
 
 </body>
 
