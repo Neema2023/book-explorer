@@ -187,7 +187,9 @@
             <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
 
                 <!-- Book Card 1 -->
-                <article class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+
+                <article data-book-id="book-1" data-title="The Reading Life" data-author="Anna Green" data-category="Personal Growth" class="overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+
                     <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="A book on a table" class="h-56 w-full object-cover">
 
                     <div class="p-5">
@@ -196,47 +198,98 @@
                         <p class="mt-3 text-sm leading-6 text-[#52666B]">
                             Discover new ideas and build a lifelong love of reading.
                         </p>
+
+
+                        <button type="button" class="favorite-btn mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-[#20834A] px-4 py-3 text-sm font-semibold text-[#20834A] hover:bg-green-50" data-action="add-favorite">
+                         <i data-lucide="heart" class="h-4 w-4" aria-hidden="true"></i>
+                             Add to Favorites
+</button>
+
+
+
+
+
                     </div>
                 </article>
 
+
                 <!-- Book Card 2 -->
-                <article class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <article data-book-id="book-2" data-title="A World of Stories" data-author="James Miller" data-category="Fiction" class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                     <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=600&q=80" alt="Books arranged for a quiet reading session" class="h-56 w-full object-cover">
 
                     <div class="p-5">
-                        <h3 class="text-lg font-bold text-[#263536]">A World of Stories</h3>
-                        <p class="mt-1 text-sm text-[#68756D]">By James Miller</p>
+                        <h3 class="text-lg font-bold text-[#263536]">
+                            A World of Stories
+                        </h3>
+
+                        <p class="mt-1 text-sm text-[#68756D]">
+                            By James Miller
+                        </p>
+
                         <p class="mt-3 text-sm leading-6 text-[#52666B]">
                             Explore stories that take you to new places and times.
                         </p>
+
+                        <button type="button" class="favorite-btn mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-[#20834A] px-4 py-3 text-sm font-semibold text-[#20834A] hover:bg-green-50" data-action="add-favorite">
+            <i data-lucide="heart" class="h-4 w-4" aria-hidden="true"></i>
+            Add to Favorites
+        </button>
                     </div>
                 </article>
 
+
+
                 <!-- Book Card 3 -->
-                <article class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <article data-book-id="book-3" data-title="Everyday Discoveries" data-author="Sarah James" data-category="Inspiration" class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                     <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="A selection of books on a table" class="h-56 w-full object-cover">
 
                     <div class="p-5">
-                        <h3 class="text-lg font-bold text-[#263536]">Everyday Discoveries</h3>
-                        <p class="mt-1 text-sm text-[#68756D]">By Sarah James</p>
+                        <h3 class="text-lg font-bold text-[#263536]">
+                            Everyday Discoveries
+                        </h3>
+
+                        <p class="mt-1 text-sm text-[#68756D]">
+                            By Sarah James
+                        </p>
+
                         <p class="mt-3 text-sm leading-6 text-[#52666B]">
                             Find inspiration in the small details of everyday life.
                         </p>
+
+
+
+                        <button type="button" class="favorite-btn mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-[#20834A] px-4 py-3 text-sm font-semibold text-[#20834A] hover:bg-green-50" data-action="add-favorite">
+            <i data-lucide="heart" class="h-4 w-4" aria-hidden="true"></i>
+            Add to Favorites
+        </button>
                     </div>
                 </article>
 
+
                 <!-- Book Card 4 -->
-                <article class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <article data-book-id="book-4" data-title="The Power of Learning" data-author="Michael Reed" data-category="Learning" class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                     <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80" alt="Books ready to be read" class="h-56 w-full object-cover">
 
                     <div class="p-5">
-                        <h3 class="text-lg font-bold text-[#263536]">The Power of Learning</h3>
-                        <p class="mt-1 text-sm text-[#68756D]">By Michael Reed</p>
+                        <h3 class="text-lg font-bold text-[#263536]">
+                            The Power of Learning
+                        </h3>
+
+                        <p class="mt-1 text-sm text-[#68756D]">
+                            By Michael Reed
+                        </p>
+
                         <p class="mt-3 text-sm leading-6 text-[#52666B]">
                             Learn something new and keep growing one page at a time.
                         </p>
+
+                        <button type="button" class="favorite-btn mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-[#20834A] px-4 py-3 text-sm font-semibold text-[#20834A] hover:bg-green-50" data-action="add-favorite">
+            <i data-lucide="heart" class="h-4 w-4" aria-hidden="true"></i>
+            Add to Favorites
+        </button>
                     </div>
                 </article>
+
 
             </div>
         </section>
@@ -317,5 +370,51 @@
     </script>
 
 </body>
+
+</html>ooter>
+
+<!-- Initialize Lucide Icons -->
+<script>
+    lucide.createIcons();
+</script>
+
+
+
+
+<script type="module" src="./js/main.js"></script>
+
+
+</body>
+
+</html>
+
+</html>
+<div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+    <span class="text-4xl font-bold text-green-600">✓</span>
+</div>
+
+<h2 id="dialog-title" class="mt-4 text-2xl font-bold text-green-700">
+    Success!
+</h2>
+
+<p id="dialog-message" class="mt-3 leading-6 text-gray-600">
+    Book added to favorites successfully!
+</p>
+
+<button id="dialog-close" type="button" class="mt-6 w-full rounded-xl bg-green-600 px-5 py-3 font-semibold text-white transition hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-200">
+            Continue
+        </button>
+
+</div>
+</div>
+
+
+
+<script type="module" src="./js/main.js"></script>
+
+
+</body>
+
+</html>
 
 </html>
