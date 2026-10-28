@@ -4,18 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Explore books, discover new stories, and find your next favorite read.">
-
     <title>Book Explorer | Discover Your Next Read</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Font Awesome Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -23,50 +16,44 @@
 
     <!-- NAVBAR -->
     <header class="sticky top-0 z-50 w-full bg-[#263536] text-white shadow-md">
+        <nav class="mx-auto flex w-full max-w-[1700px] items-center gap-3 px-4 py-4 sm:px-6 lg:px-10" aria-label="Main navigation">
 
-        <nav class="relative mx-auto flex w-full max-w-[1400px] items-center gap-3 px-5 py-4 sm:px-8 lg:px-10" aria-label="Main navigation">
-
-            <!-- Logo -->
             <a href="index.html" class="flex shrink-0 items-center gap-2 sm:gap-3">
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#315247] text-[#A8E6BD] sm:h-11 sm:w-11">
-                    <i data-lucide="book-open" class="h-7 w-7" aria-hidden="true"></i>
+                    <i data-lucide="book-open" class="h-6 w-6" aria-hidden="true"></i>
                 </span>
 
-                <span class="text-base font-extrabold tracking-tight sm:text-2xl">
+                <span class="text-lg font-extrabold tracking-tight sm:text-2xl">
                     Book <span class="text-[#70D99A]">Explorer</span>
                 </span>
             </a>
 
             <!-- Desktop Navigation -->
-            <div class="ml-auto hidden items-center gap-2 text-sm font-medium md:flex lg:gap-4">
-
-                <a href="index.html" aria-current="page" class="rounded-lg bg-[#365448] px-3 py-2 text-[#91E5AF] transition duration-200 hover:bg-[#426657]">
+            <div class="ml-auto hidden items-center gap-2 text-base font-medium md:flex lg:gap-4">
+                <a href="index.html" aria-current="page" class="rounded-lg bg-[#365448] px-4 py-2 text-[#91E5AF] transition hover:bg-[#426657]">
                     Home
                 </a>
 
-                <a href="favorites.html" class="rounded-lg px-3 py-2 text-gray-200 transition duration-200 hover:bg-[#365448] hover:text-[#91E5AF]">
+                <a href="favorites.html" class="rounded-lg px-4 py-2 text-gray-200 transition hover:bg-[#365448] hover:text-[#91E5AF]">
                     Favorites
                 </a>
 
-                <a href="about.html" class="rounded-lg px-3 py-2 text-gray-200 transition duration-200 hover:bg-[#365448] hover:text-[#91E5AF]">
+                <a href="about.html" class="rounded-lg px-4 py-2 text-gray-200 transition hover:bg-[#365448] hover:text-[#91E5AF]">
                     About
                 </a>
             </div>
 
             <!-- Mobile Menu -->
             <div class="relative ml-auto md:hidden">
-
                 <input type="checkbox" id="mobile-menu-toggle" class="peer sr-only">
 
-                <label for="mobile-menu-toggle" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg text-white transition hover:bg-[#365448] focus-within:ring-2 focus-within:ring-[#91E5AF]" aria-label="Toggle navigation menu">
+                <label for="mobile-menu-toggle" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg transition hover:bg-[#365448]" aria-label="Toggle navigation menu">
                     <i data-lucide="menu" class="h-6 w-6" aria-hidden="true"></i>
                 </label>
 
                 <div class="absolute right-0 top-full z-50 mt-3 hidden w-56 rounded-xl border border-[#435655] bg-[#263536] p-3 shadow-xl peer-checked:block">
-
                     <nav class="flex flex-col gap-2" aria-label="Mobile navigation">
-
-                        <a href="index.html" class="rounded-lg bg-[#365448] px-4 py-3 text-[#91E5AF] transition hover:bg-[#426657]">
+                        <a href="index.html" aria-current="page" class="rounded-lg bg-[#365448] px-4 py-3 text-[#91E5AF]">
                             Home
                         </a>
 
@@ -78,17 +65,16 @@
                             About
                         </a>
 
-                        <a href="#explore" class="mt-1 flex items-center justify-center gap-2 rounded-xl bg-[#20834A] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#176A3A]">
+                        <a href="#explore" class="mt-1 flex items-center justify-center gap-2 rounded-xl bg-[#20834A] px-4 py-3 text-base font-semibold text-white hover:bg-[#176A3A]">
                             Explore Books
                             <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
                         </a>
-
                     </nav>
                 </div>
             </div>
 
-            <!-- Desktop Explore Button -->
-            <a href="#explore" class="hidden shrink-0 items-center gap-2 rounded-xl bg-[#20834A] px-3 py-3 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#176A3A] md:ml-3 md:inline-flex lg:ml-5 lg:px-4">
+            <!-- Desktop CTA -->
+            <a href="#explore" class="ml-4 hidden shrink-0 items-center gap-2 rounded-xl bg-[#20834A] px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#176A3A] md:inline-flex">
                 Explore Books
                 <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
             </a>
@@ -96,200 +82,116 @@
         </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main>
 
         <!-- HERO SECTION -->
         <section class="w-full overflow-hidden bg-gradient-to-br from-[#F7FAF8] to-[#E8F1EB]">
-
-            <div class="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 px-5 py-12 sm:px-8 sm:py-16 lg:grid-cols-2 lg:gap-12 lg:px-10 lg:py-14">
+            <div class="mx-auto grid w-full max-w-[1700px] grid-cols-1 items-center gap-8 px-4 py-12 sm:px-6 sm:py-14 lg:grid-cols-2 lg:gap-12 lg:px-10 lg:py-16">
 
                 <!-- Hero Text -->
                 <div class="min-w-0">
-
-                    <p class="mb-5 inline-flex items-center gap-2 rounded-full bg-[#D5EBDD] px-4 py-2 text-sm font-semibold text-[#247443]">
+                    <p class="mb-5 inline-flex items-center gap-2 rounded-full bg-[#D5EBDD] px-4 py-2 text-base font-semibold text-[#247443]">
                         <i data-lucide="sparkles" class="h-4 w-4" aria-hidden="true"></i> Discover. Read. Grow.
                     </p>
 
-                    <h1 class="max-w-xl text-4xl font-extrabold leading-tight tracking-tight text-[#263536] sm:text-5xl lg:text-6xl">
+                    <h1 class="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
                         Explore a World of
                         <span class="text-[#20834A]">Books</span>
                     </h1>
 
-                    <p class="mt-5 max-w-xl text-base leading-7 text-[#52666B] sm:text-lg sm:leading-8">
+                    <p class="mt-6 max-w-2xl text-lg leading-8 text-[#52666B] sm:text-xl">
                         Discover a world of amazing books, explore stories that inspire you, learn new things, and find books that match your interests. Browse different titles, search for books you want to read, and save your favorites so you can easily find them again whenever
                         you want to continue your reading journey.
                     </p>
 
-                    <!-- Search Form (visual for now) -->
-                    <form id="hero-search-form" class="mt-7 flex w-full max-w-xl items-center gap-2 overflow-hidden rounded-xl border border-[#D5E0D9] bg-white p-1.5 shadow-md focus-within:border-[#20834A]" role="search">
+                    <!-- Search Form -->
+                    <form id="hero-search-form" class="mt-8 flex w-full max-w-2xl items-center gap-2 overflow-hidden rounded-xl border border-[#D5E0D9] bg-white p-1.5 shadow-md focus-within:border-[#20834A]" role="search">
 
                         <i data-lucide="search" class="ml-2 h-5 w-5 shrink-0 text-[#20834A] sm:ml-3 sm:h-6 sm:w-6" aria-hidden="true"></i>
 
-                        <input id="hero-search" type="search" placeholder="Search for books or authors..." aria-label="Search books by title or author" class="min-w-0 flex-1 bg-transparent px-2 py-3 text-sm text-[#263536] outline-none placeholder:text-[#899892]">
+                        <input id="hero-search" type="search" placeholder="Search for books or authors..." aria-label="Search books by title or author" class="min-w-0 flex-1 bg-transparent px-2 py-3 text-base text-[#263536] outline-none placeholder:text-[#899892]">
 
-                        <button type="submit" class="shrink-0 rounded-lg bg-[#20834A] px-3 py-3 text-sm font-semibold text-white transition hover:bg-[#176A3A] sm:px-7">
+                        <button type="submit" class="shrink-0 rounded-lg bg-[#20834A] px-4 py-3 text-base font-semibold text-white transition hover:bg-[#176A3A] sm:px-7">
                             Search
                         </button>
                     </form>
 
-                    <p id="search-message" class="mt-3 text-sm text-[#52666B]" aria-live="polite"></p>
-
+                    <p id="search-message" class="mt-3 text-base text-[#52666B]" aria-live="polite"></p>
                 </div>
 
                 <!-- Hero Image -->
                 <div class="relative min-w-0">
-
                     <div class="absolute inset-5 rounded-full bg-[#C8E3D0] blur-3xl" aria-hidden="true"></div>
 
-                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=85" alt="A collection of books ready to be explored" class="relative mx-auto h-64 w-full max-w-xl rounded-3xl object-cover shadow-xl sm:h-80 lg:h-[390px]">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=85" alt="A collection of books ready to be explored" class="relative h-72 w-full rounded-3xl object-cover shadow-xl sm:h-96 lg:h-[440px]">
 
-                    <!-- Image Label -->
-                    <div class="absolute bottom-4 left-4 rounded-xl border border-white/70 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-sm">
-                        <p class="text-sm font-bold text-[#24563A]">
+                    <div class="absolute bottom-4 left-4 rounded-xl border border-white/70 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-sm sm:bottom-6 sm:left-6">
+                        <p class="text-base font-bold text-[#24563A]">
                             Discover something new
                         </p>
-
-                        <p class="mt-1 text-xs text-[#68756D]">
+                        <p class="mt-1 text-sm text-[#68756D]">
                             Your next chapter starts here
                         </p>
                     </div>
-
                 </div>
 
             </div>
         </section>
 
         <!-- FEATURED BOOKS -->
-        <section id="explore" class="mx-auto w-full max-w-[1400px] px-5 py-12 sm:px-8 sm:py-16 lg:px-10">
+        <section id="explore" class="mx-auto w-full max-w-[1700px] px-4 py-12 sm:px-6 sm:py-14 lg:px-10 lg:py-16">
 
-            <!-- Section Heading -->
             <div class="flex items-center justify-between gap-4">
-
                 <div>
-                    <p class="text-sm font-semibold uppercase tracking-widest text-[#20834A]">
+                    <p class="text-base font-semibold uppercase tracking-widest text-[#20834A]">
                         Your reading journey
                     </p>
 
-                    <h2 class="mt-2 text-2xl font-extrabold text-[#263536] sm:text-3xl">
+                    <h2 class="mt-2 text-3xl font-extrabold text-[#263536] sm:text-4xl">
                         Featured Books
                     </h2>
+
+                    <p class="mt-3 text-base leading-7 text-[#52666B] sm:text-lg">
+                        Explore books and find your next favorite read.
+                    </p>
                 </div>
 
-                <a href="#explore" class="hidden shrink-0 items-center gap-2 rounded-xl bg-[#20834A] px-4 py-3 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#176A3A] md:inline-flex">
+                <a href="#explore" class="hidden shrink-0 items-center gap-2 rounded-xl bg-[#20834A] px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#176A3A] md:inline-flex">
                     View All
                     <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
                 </a>
-
             </div>
 
-            <!-- Responsive Book Grid -->
-            <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+            <!-- Books loaded from Open Library API -->
+            <div id="books-grid" class="mt-8 grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+                <!-- JavaScript inserts book cards here -->
+            </div>
 
-                <!-- Book Card 1 -->
+            <!-- Loading, empty results, and error messages -->
+            <p id="books-message" class="mt-6 text-center text-base leading-7 text-[#68756D]" role="status" aria-live="polite"></p>
 
-                <article data-book-id="book-1" data-title="The Reading Life" data-author="Anna Green" data-category="Personal Growth" class="overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+        </section>
 
-                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="A book on a table" class="h-56 w-full object-cover">
+        <!-- CALL TO ACTION -->
+        <section class="px-4 pb-12 sm:px-6 lg:px-10 lg:pb-16">
+            <div class="mx-auto max-w-[1700px] rounded-3xl bg-[#E8F1EB] px-5 py-12 text-center sm:px-8 sm:py-14">
 
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-[#263536]">The Reading Life</h3>
-                        <p class="mt-1 text-sm text-[#68756D]">By Anna Green</p>
-                        <p class="mt-3 text-sm leading-6 text-[#52666B]">
-                            Discover new ideas and build a lifelong love of reading.
-                        </p>
+                <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#D5EBDD] text-[#20834A]">
+                    <i data-lucide="book-open" class="h-7 w-7" aria-hidden="true"></i>
+                </div>
 
+                <h2 class="mt-5 text-3xl font-extrabold sm:text-4xl">
+                    Your Next Favorite Book Is Waiting
+                </h2>
 
-                        <button type="button" class="favorite-btn mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-[#20834A] px-4 py-3 text-sm font-semibold text-[#20834A] hover:bg-green-50" data-action="add-favorite">
-                         <i data-lucide="heart" class="h-4 w-4" aria-hidden="true"></i>
-                             Add to Favorites
-</button>
+                <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#52666B]">
+                    Keep exploring, discover new authors, and build a collection of stories that inspire you.
+                </p>
 
-
-
-
-
-                    </div>
-                </article>
-
-
-                <!-- Book Card 2 -->
-                <article data-book-id="book-2" data-title="A World of Stories" data-author="James Miller" data-category="Fiction" class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=600&q=80" alt="Books arranged for a quiet reading session" class="h-56 w-full object-cover">
-
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-[#263536]">
-                            A World of Stories
-                        </h3>
-
-                        <p class="mt-1 text-sm text-[#68756D]">
-                            By James Miller
-                        </p>
-
-                        <p class="mt-3 text-sm leading-6 text-[#52666B]">
-                            Explore stories that take you to new places and times.
-                        </p>
-
-                        <button type="button" class="favorite-btn mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-[#20834A] px-4 py-3 text-sm font-semibold text-[#20834A] hover:bg-green-50" data-action="add-favorite">
-            <i data-lucide="heart" class="h-4 w-4" aria-hidden="true"></i>
-            Add to Favorites
-        </button>
-                    </div>
-                </article>
-
-
-
-                <!-- Book Card 3 -->
-                <article data-book-id="book-3" data-title="Everyday Discoveries" data-author="Sarah James" data-category="Inspiration" class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="A selection of books on a table" class="h-56 w-full object-cover">
-
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-[#263536]">
-                            Everyday Discoveries
-                        </h3>
-
-                        <p class="mt-1 text-sm text-[#68756D]">
-                            By Sarah James
-                        </p>
-
-                        <p class="mt-3 text-sm leading-6 text-[#52666B]">
-                            Find inspiration in the small details of everyday life.
-                        </p>
-
-
-
-                        <button type="button" class="favorite-btn mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-[#20834A] px-4 py-3 text-sm font-semibold text-[#20834A] hover:bg-green-50" data-action="add-favorite">
-            <i data-lucide="heart" class="h-4 w-4" aria-hidden="true"></i>
-            Add to Favorites
-        </button>
-                    </div>
-                </article>
-
-
-                <!-- Book Card 4 -->
-                <article data-book-id="book-4" data-title="The Power of Learning" data-author="Michael Reed" data-category="Learning" class="min-w-0 overflow-hidden rounded-2xl border border-[#DCE7DF] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80" alt="Books ready to be read" class="h-56 w-full object-cover">
-
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-[#263536]">
-                            The Power of Learning
-                        </h3>
-
-                        <p class="mt-1 text-sm text-[#68756D]">
-                            By Michael Reed
-                        </p>
-
-                        <p class="mt-3 text-sm leading-6 text-[#52666B]">
-                            Learn something new and keep growing one page at a time.
-                        </p>
-
-                        <button type="button" class="favorite-btn mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-[#20834A] px-4 py-3 text-sm font-semibold text-[#20834A] hover:bg-green-50" data-action="add-favorite">
-            <i data-lucide="heart" class="h-4 w-4" aria-hidden="true"></i>
-            Add to Favorites
-        </button>
-                    </div>
-                </article>
-
+                <a href="#explore" class="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#20834A] px-6 py-3 text-base font-semibold text-white transition hover:bg-[#176A3A]">
+                    Browse Books
+                    <i data-lucide="arrow-right" class="h-5 w-5" aria-hidden="true"></i>
+                </a>
 
             </div>
         </section>
@@ -298,123 +200,78 @@
 
     <!-- FOOTER -->
     <footer class="w-full bg-[#263536] text-white">
+        <div class="mx-auto w-full max-w-[1700px] px-4 py-10 sm:px-6 lg:px-10">
 
-        <div class="mx-auto w-full max-w-[1400px] px-5 py-10 sm:px-8 lg:px-10">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
 
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10">
-
-                <!-- Footer Brand -->
+                <!-- Brand -->
                 <div>
-                    <a href="index.html" class="inline-flex items-center gap-2 text-lg font-bold">
+                    <a href="index.html" class="inline-flex items-center gap-2 text-xl font-bold">
                         <i data-lucide="book-open" class="h-8 w-8 text-[#91E5AF]" aria-hidden="true"></i>
-
-                        <span>
-                            Book <span class="text-[#70D99A]">Explorer</span>
-                        </span>
+                        <span>Book <span class="text-[#70D99A]">Explorer</span></span>
                     </a>
 
-                    <p class="mt-2 max-w-sm text-sm leading-6 text-gray-300">
+                    <p class="mt-3 max-w-sm text-base leading-7 text-gray-300">
                         Better books. A brighter you. Discover stories and find inspiration one page at a time.
                     </p>
                 </div>
 
                 <!-- Footer Navigation -->
-                <nav class="flex flex-col items-start gap-3 text-sm text-gray-200" aria-label="Footer navigation">
+                <nav class="flex flex-col items-start gap-3 text-base text-gray-200" aria-label="Footer navigation">
 
-                    <h2 class="mb-1 text-base font-bold text-white">
-                        Quick Links
-                    </h2>
+                    <h2 class="mb-1 text-lg font-bold text-white">Quick Links</h2>
 
-                    <a href="index.html" class="transition hover:text-[#91E5AF]">Home</a>
-                    <a href="favorites.html" class="transition hover:text-[#91E5AF]">Favorites</a>
-                    <a href="about.html" class="transition hover:text-[#91E5AF]">About</a>
+                    <a href="index.html" aria-current="page" class="transition hover:text-[#91E5AF]">
+                        Home
+                    </a>
 
+                    <a href="favorites.html" class="transition hover:text-[#91E5AF]">
+                        Favorites
+                    </a>
+
+                    <a href="about.html" class="transition hover:text-[#91E5AF]">
+                        About
+                    </a>
                 </nav>
 
                 <!-- Social Media -->
                 <div>
-                    <h2 class="mb-4 text-base font-bold text-white">
+                    <h2 class="mb-4 text-lg font-bold text-white">
                         Connect With Us
                     </h2>
 
                     <div class="flex items-center gap-4">
-
                         <a href="https://github.com/Neema2023" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
                             <i class="fa-brands fa-github text-xl" aria-hidden="true"></i>
                         </a>
 
-                        <a href="https://wa.me/250790156413" target="_blank" rel="noopener noreferrer" aria-label="Chat with me on WhatsApp" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
+                        <a href="https://wa.me/250790156413" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
                             <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
                         </a>
 
                         <a href="https://www.linkedin.com/in/neema2023/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="flex h-10 w-10 items-center justify-center rounded-full border border-[#526163] text-[#91E5AF] transition hover:border-[#91E5AF] hover:bg-[#365448] hover:text-white">
                             <i class="fa-brands fa-linkedin-in text-xl" aria-hidden="true"></i>
                         </a>
-
                     </div>
                 </div>
 
             </div>
 
-            <!-- Copyright -->
-            <div class="mt-8 border-t border-[#435655] pt-5 text-center text-xs text-gray-300">
+            <div class="mt-8 border-t border-[#435655] pt-5 text-center text-sm text-gray-300">
                 &copy; 2026 Book Explorer. All rights reserved.
             </div>
 
         </div>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
+    <!-- Initialize Icons -->
     <script>
         lucide.createIcons();
     </script>
 
-</body>
-
-</html>ooter>
-
-<!-- Initialize Lucide Icons -->
-<script>
-    lucide.createIcons();
-</script>
-
-
-
-
-<script type="module" src="./js/main.js"></script>
-
+    <!-- Main JavaScript: API, search, and favorites -->
+    <script type="module" src="./js/main.js"></script>
 
 </body>
-
-</html>
-
-</html>
-<div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-    <span class="text-4xl font-bold text-green-600">✓</span>
-</div>
-
-<h2 id="dialog-title" class="mt-4 text-2xl font-bold text-green-700">
-    Success!
-</h2>
-
-<p id="dialog-message" class="mt-3 leading-6 text-gray-600">
-    Book added to favorites successfully!
-</p>
-
-<button id="dialog-close" type="button" class="mt-6 w-full rounded-xl bg-green-600 px-5 py-3 font-semibold text-white transition hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-200">
-            Continue
-        </button>
-
-</div>
-</div>
-
-
-
-<script type="module" src="./js/main.js"></script>
-
-
-</body>
-
-</html>
 
 </html>
